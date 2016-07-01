@@ -51,7 +51,7 @@ void ADC_Init(){
 
 	Chip_ADC_Init(LPC_ADC0, & ADCsetup);
 	Chip_ADC_EnableChannel(LPC_ADC0,ADC_CH1, ENABLE);
-	//Chip_ADC_SetSampleRate(LPC_ADC0, &ADCsetup,ADC_MAX_SAMPLE_RATE);
+	Chip_ADC_SetSampleRate(LPC_ADC0, &ADCsetup,ADC_MAX_SAMPLE_RATE);
 
 };
 

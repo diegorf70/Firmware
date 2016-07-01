@@ -43,6 +43,8 @@
 #define INPUT_PORT 				0
 #define OUTPUT_PORT 				1
 
+#define RETARDO               100000
+
 typedef struct{
 	uint8_t puerto;
 	uint32_t pin;
@@ -83,20 +85,45 @@ void Init_Ports_Tec(){
 
 uint8_t Leer_TEC1(){
 
+	uint32_t contador=RETARDO;
+
+	while(contador!=0){
+
+		contador=contador-1;}
+
 	if( Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, SW1.gpio, 4)) return 0;
 	else return 1;
 };
 uint8_t Leer_TEC2(){
+
+	uint32_t contador=RETARDO;
+
+		while(contador!=0){
+
+			contador=contador-1;}
 
 	if( Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, SW2.gpio, 8)) return 0;
 	else return 1;
 };
 uint8_t Leer_TEC3(){
 
+	uint32_t contador=RETARDO;
+
+		while(contador!=0){
+
+			contador=contador-1;}
+
 	if( Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, SW3.gpio, 9)) return 0;
 	else return 1;
 };
 uint8_t Leer_TEC4(){
+
+	uint32_t contador=RETARDO;
+
+		while(contador!=0){
+
+			contador=contador-1;}
+
 	if( Chip_GPIO_ReadPortBit(LPC_GPIO_PORT, SW4.gpio, 9)) return 0;
 	else return 1;
 };
